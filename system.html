@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NavFusion | System</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a href="index.html" class="brand">
+        <div class="brand-mark">NF</div>
+        <span>NavFusion</span>
+      </a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="overview.html">Overview</a>
+        <a href="system.html">System</a>
+        <a href="team.html">Team</a>
+        <a href="milestones.html">Milestones</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">System Design</p>
+      <h1>Architecture and Requirements</h1>
+      <p class="page-intro">
+        The NavFusion system collects sensor data, performs filtering and AI-based correction, and
+        outputs position, orientation, and velocity in real time.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container grid-3">
+      <div class="card">
+        <h3>Data Collection</h3>
+        <p>Collect IMU and GNSS data with timestamp synchronization for logging and fusion.</p>
+      </div>
+      <div class="card">
+        <h3>Sensor Fusion</h3>
+        <p>Use Kalman filtering or equivalent techniques to reduce noise and support transitions.</p>
+      </div>
+      <div class="card">
+        <h3>AI Correction</h3>
+        <p>Apply machine learning to improve inertial estimates and reduce long-term drift.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section light">
+    <div class="container grid-2">
+      <div class="card">
+        <h3>Primary Functional Requirements</h3>
+        <ul>
+          <li>Real-time drift correction with target latency under 50 ms per sample</li>
+          <li>Seamless switching between GPS-active and GPS-denied modes</li>
+          <li>Storage of collected data for later post-processing</li>
+          <li>Deployment on both ground and aerial platforms</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Hardware / Software Targets</h3>
+        <ul>
+          <li>IMU sampling rate of at least 100 Hz</li>
+          <li>Battery runtime target of 6 hours</li>
+          <li>MATLAB / Simulink deployment workflow</li>
+          <li>Logging support for MAT and CSV formats</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer">
+      <p>NavFusion Senior Design Project</p>
+      <p>Stevens Institute of Technology</p>
+    </div>
+  </footer>
+</body>
+</html>
