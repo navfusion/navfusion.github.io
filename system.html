@@ -53,6 +53,89 @@
   </section>
 
   <section class="section light">
+    <div class="container">
+      <div class="section-heading" style="max-width: 100%;">
+        <h2>System Design</h2>
+        <p>The NavFusion architecture is divided into hardware edge integration, middleware processing, and dual AI-correction pipelines. Raw positional data is continuously ingested from the physical IMU and GNSS receivers, published to a ROS2 middleware network, and fed into MATLAB/Simulink for preliminary filtering. From there, the refined data is processed by our machine learning backend models to output a highly accurate, drift-corrected position estimate even during extended GPS outages.</p>
+      </div>
+      
+      <!-- System block diagram image -->
+      <div class="diagram-container" style="background: var(--white); padding: 3rem 2rem; border-radius: var(--radius); box-shadow: var(--shadow); border: 1px solid var(--border); margin-bottom: 3rem;">
+        <img src="pictures/NavFusionArchFlow.svg" alt="NavFusion System Architecture Flow Diagram" style="width: 100%; height: auto; display: block;">
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <h3>Hardware & Edge Integration</h3>
+          <p>Continuous sensor data ingestion from MEMS IMUs and GNSS receivers, deployed on embedded hardware for mobile ground (van) and aerial (drone) testing.</p>
+        </div>
+        <div class="card">
+          <h3>Software & Middleware</h3>
+          <p>Utilizing <strong>ROS2</strong> for real-time node communication, sensor data publishing, and logging, alongside <strong>MATLAB/Simulink</strong> for simulation and filter design.</p>
+        </div>
+        <div class="card">
+          <h3>Machine Learning Pipelines</h3>
+          <p>Evaluating two concurrent drift-correction models: <strong>PSO-LSTM</strong> (Particle Swarm Optimization) and <strong>GRU-AKF</strong> (Gated Recurrent Unit with Adaptive Kalman Filtering).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-heading" style="max-width: 100%;">
+        <h2>Hardware Architecture & Design</h2>
+        <p>The physical deployment of NavFusion relies on a robust edge-computing setup capable of real-time data ingestion and processing. Our hardware stack integrates high-precision MEMS IMUs and GNSS receivers with a central embedded compute unit to run the ROS2 middleware. Designed by our mechanical team, the alpha prototype features custom 3D-printed mounts and vibration isolation to ensure clean sensor data collection across both mobile ground (van) and aerial (drone) testing environments. This setup is optimized to hit our targets of 100 Hz sampling rates and up to 6 hours of continuous battery runtime.</p>
+      </div>
+      
+      <div class="grid-3">
+        <div class="card" style="padding: 1.5rem; text-align: center; display: flex; flex-direction: column;">
+          <div style="flex-grow: 1; display: flex; align-items: center; justify-content: center;">
+            <img src="pictures/hardware_architecture.png" alt="Hardware Architecture Layout" style="width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--border);">
+          </div>
+          <h3 style="margin-top: 1.5rem; font-size: 1.1rem; margin-bottom: 0;">Hardware Architecture</h3>
+        </div>
+        <div class="card" style="padding: 1.5rem; text-align: center; display: flex; flex-direction: column;">
+          <div style="flex-grow: 1; display: flex; align-items: center; justify-content: center;">
+            <img src="pictures/alpha_prototype.jpg" alt="Physical Alpha Prototype" style="width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--border);">
+          </div>
+          <h3 style="margin-top: 1.5rem; font-size: 1.1rem; margin-bottom: 0;">Alpha Prototype</h3>
+        </div>
+        <div class="card" style="padding: 1.5rem; text-align: center; display: flex; flex-direction: column;">
+          <div style="flex-grow: 1; display: flex; align-items: center; justify-content: center;">
+            <img src="pictures/final_prototype.jpg" alt="Final Prototype" style="width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--border);">
+          </div>
+          <h3 style="margin-top: 1.5rem; font-size: 1.1rem; margin-bottom: 0;">Final Prototype</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section light">
+    <div class="container">
+      <div class="section-heading" style="max-width: 100%;">
+        <h2>Testing & Refinement</h2>
+        <p>Rigorous hardware testing was conducted across multiple platforms to evaluate the system's performance under dynamic conditions. Early data collection utilized an RC car to verify ROS2 node communication and 100 Hz sensor sampling rates in a controlled environment. Subsequent full-scale testing was performed using the Kearfott test van, exposing the sensor payload to real-world vibrations, varying speeds, and extended GNSS outages. These trials successfully validated our custom vibration isolation mounts, confirmed our 6-hour battery runtime goal, and provided the high-quality, synchronized datasets required to train and refine our machine learning models.</p>
+      </div>
+      
+      <div class="grid-2">
+        <div class="card" style="padding: 1.5rem; text-align: center; display: flex; flex-direction: column;">
+          <div style="flex-grow: 1; display: flex; align-items: center; justify-content: center;">
+            <img src="pictures/testing_setup_rccar.png" alt="RC Car Testing Setup" style="width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--border);">
+          </div>
+          <h3 style="margin-top: 1.5rem; font-size: 1.1rem; margin-bottom: 0;">RC Car Testing</h3>
+        </div>
+        <div class="card" style="padding: 1.5rem; text-align: center; display: flex; flex-direction: column;">
+          <div style="flex-grow: 1; display: flex; align-items: center; justify-content: center;">
+            <img src="pictures/testing_setup_kearfottvan.jpg" alt="Kearfott Van Testing Setup" style="width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--border);">
+          </div>
+          <h3 style="margin-top: 1.5rem; font-size: 1.1rem; margin-bottom: 0;">Kearfott Van Testing</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
     <div class="container grid-2">
       <div class="card">
         <h3>Primary Functional Requirements</h3>
