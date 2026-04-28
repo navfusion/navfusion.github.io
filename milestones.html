@@ -36,25 +36,95 @@
 
   <section class="section">
     <div class="container timeline">
-      <div class="timeline-item">
-        <h3>Research and Background Study</h3>
-        <p>Investigate GPS denial, IMU drift, AI-based navigation correction, and prior research.</p>
+      
+      <div class="timeline-item" style="margin-bottom: 4rem;">
+        <div class="grid-2" style="align-items: start; gap: 2rem;">
+          <div>
+            <p class="eyebrow" style="margin-bottom: 0.5rem; color: #64748b;">September - October 2025</p>
+            <h3 style="margin-top: 0;">Research and Background Study</h3>
+            <p>Investigate GPS denial, IMU drift, AI-based navigation correction, and prior research.</p>
+            <h4 style="margin-bottom: 0.5rem; font-size: 1.05rem;">Major Findings:</h4>
+            <ul style="padding-left: 1.2rem; margin-top: 0; color: #475569;">
+              <li>Identified PSO-LSTM and GRU-AKF as the most viable machine learning models for extended IMU drift correction.</li>
+              <li>Concluded that traditional Kalman filtering alone is insufficient to maintain accuracy during prolonged GNSS denial.</li>
+            </ul>
+          </div>
+          <div style="background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 8px; min-height: 200px; display: flex; align-items: center; justify-content: center; text-align: center; padding: 1rem;">
+            <p style="color: #64748b; margin: 0; font-weight: 500;">[Insert Literature Review Diagram Here]</p>
+          </div>
+        </div>
       </div>
-      <div class="timeline-item">
-        <h3>Requirements and Preliminary Design</h3>
-        <p>Define functional and non-functional system, hardware, and software requirements.</p>
+
+      <div class="timeline-item" style="margin-bottom: 4rem;">
+        <div class="grid-2" style="align-items: start; gap: 2rem;">
+          <div>
+            <p class="eyebrow" style="margin-bottom: 0.5rem; color: #64748b;">November - December 2025</p>
+            <h3 style="margin-top: 0;">Requirements and Preliminary Design</h3>
+            <p>Define functional and non-functional system, hardware, and software requirements.</p>
+            <h4 style="margin-bottom: 0.5rem; font-size: 1.05rem;">Major Findings:</h4>
+            <ul style="padding-left: 1.2rem; margin-top: 0; color: #475569;">
+              <li>Finalized hardware stack selections, including high-precision MEMS IMUs and embedded compute units.</li>
+              <li>Established primary performance targets: 100 Hz sampling rate, 6-hour battery runtime, and &lt;50 ms latency.</li>
+            </ul>
+          </div>
+          <div style="display: flex; align-items: center; justify-content: center;">
+            <img src="pictures/hardware_architecture.png" alt="Hardware Architecture Diagram" style="width: 100%; height: auto; border-radius: 8px; border: 1px solid #cbd5e1;">
+          </div>
+        </div>
       </div>
-      <div class="timeline-item">
-        <h3>Alpha Prototyping</h3>
-        <p>Develop early hardware and software prototypes and evaluate feasibility.</p>
+
+      <div class="timeline-item" style="margin-bottom: 4rem;">
+        <div class="grid-2" style="align-items: start; gap: 2rem;">
+          <div>
+            <p class="eyebrow" style="margin-bottom: 0.5rem; color: #64748b;">January - February 2026</p>
+            <h3 style="margin-top: 0;">Alpha Prototyping</h3>
+            <p>Develop early hardware and software prototypes and evaluate feasibility.</p>
+            <h4 style="margin-bottom: 0.5rem; font-size: 1.05rem;">Major Findings:</h4>
+            <ul style="padding-left: 1.2rem; margin-top: 0; color: #475569;">
+              <li>Designed custom 3D-printed vibration isolation mounts to ensure clean data collection.</li>
+              <li>Successfully verified ROS2 node communication and early software-hardware integration.</li>
+            </ul>
+          </div>
+          <div style="display: flex; align-items: center; justify-content: center;">
+            <img src="pictures/alpha_prototype.jpg" alt="Alpha Prototype" style="width: 100%; height: auto; border-radius: 8px; border: 1px solid #cbd5e1;">
+          </div>
+        </div>
       </div>
-      <div class="timeline-item">
-        <h3>Testing and Evaluation</h3>
-        <p>Test system behavior, performance, latency, and deployment readiness.</p>
+
+      <div class="timeline-item" style="margin-bottom: 4rem;">
+        <div class="grid-2" style="align-items: start; gap: 2rem;">
+          <div>
+            <p class="eyebrow" style="margin-bottom: 0.5rem; color: #64748b;">March - April 2026</p>
+            <h3 style="margin-top: 0;">Testing and Evaluation</h3>
+            <p>Test system behavior, performance, latency, and deployment readiness.</p>
+            <h4 style="margin-bottom: 0.5rem; font-size: 1.05rem;">Major Findings:</h4>
+            <ul style="padding-left: 1.2rem; margin-top: 0; color: #475569;">
+              <li>Logged over 12 hours of synchronized real-world field data across varied dynamic conditions.</li>
+              <li>Confirmed system durability in mobile testing (Kearfott van) and exceeded power targets with an 8+ hour battery life.</li>
+            </ul>
+          </div>
+          <div style="display: flex; align-items: center; justify-content: center;">
+            <img src="pictures/testing_setup_kearfottvan.jpg" alt="Kearfott Van Testing Setup" style="width: 100%; height: auto; border-radius: 8px; border: 1px solid #cbd5e1;">
+          </div>
+        </div>
       </div>
+
       <div class="timeline-item">
-        <h3>Beta Prototyping</h3>
-        <p>Refine the design and integrate system-level improvements for final demonstration.</p>
+        <div class="grid-2" style="align-items: start; gap: 2rem;">
+          <div>
+            <p class="eyebrow" style="margin-bottom: 0.5rem; color: #64748b;">May 2026</p>
+            <h3 style="margin-top: 0;">Beta Prototyping & Final Delivery</h3>
+            <p>Refine the design and integrate system-level improvements for final demonstration.</p>
+            <h4 style="margin-bottom: 0.5rem; font-size: 1.05rem;">Major Findings:</h4>
+            <ul style="padding-left: 1.2rem; margin-top: 0; color: #475569;">
+              <li>Finalized machine learning pipeline optimizations against the collected real-world testing datasets.</li>
+              <li>Packaged the complete operational system within the defined budget of &lt;$1,500.</li>
+            </ul>
+          </div>
+          <div style="display: flex; align-items: center; justify-content: center;">
+            <img src="pictures/final_prototype.jpg" alt="Final Prototype" style="width: 100%; height: auto; border-radius: 8px; border: 1px solid #cbd5e1;">
+          </div>
+        </div>
       </div>
     </div>
   </section>
