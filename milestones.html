@@ -13,6 +13,7 @@
         <img src="navfusion_logo.png" alt="NF" class="brand-mark">
         <span>NavFusion</span>
       </a>
+      <button class="menu-toggle" aria-label="Toggle Navigation">&#9776;</button>
       <nav>
         <a href="index.html">Home</a>
         <a href="overview.html">Overview</a>
@@ -45,12 +46,14 @@
             <p>Investigate GPS denial, IMU drift, AI-based navigation correction, and prior research.</p>
             <h4 style="margin-bottom: 0.5rem; font-size: 1.05rem;">Major Findings:</h4>
             <ul style="padding-left: 1.2rem; margin-top: 0; color: #475569;">
+              <li>Identified critical GPS vulnerabilities in existing navigation systems, such as urban canyons in cities or intentional signal denial.</li>
+              <li>Researched current inertial navigation systems performance characteristics, finding extended drift over short deployments.</li>
               <li>Identified PSO-LSTM and GRU-AKF as the most viable machine learning models for extended IMU drift correction.</li>
-              <li>Concluded that traditional Kalman filtering alone is insufficient to maintain accuracy during prolonged GNSS denial.</li>
+              <li>Established baseline performance metrics for comparison using dead reckoning.</li>
             </ul>
           </div>
-          <div style="background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 8px; min-height: 200px; display: flex; align-items: center; justify-content: center; text-align: center; padding: 1rem;">
-            <p style="color: #64748b; margin: 0; font-weight: 500;">[Insert Literature Review Diagram Here]</p>
+          <div style="display: flex; align-items: center; justify-content: center;">
+            <img src="pictures/currentsolutions_milestones.png" alt="Hardware Architecture Diagram" style="width: 100%; height: auto; border-radius: 8px; border: 1px solid #cbd5e1;">
           </div>
         </div>
       </div>
@@ -63,8 +66,10 @@
             <p>Define functional and non-functional system, hardware, and software requirements.</p>
             <h4 style="margin-bottom: 0.5rem; font-size: 1.05rem;">Major Findings:</h4>
             <ul style="padding-left: 1.2rem; margin-top: 0; color: #475569;">
-              <li>Finalized hardware stack selections, including high-precision MEMS IMUs and embedded compute units.</li>
-              <li>Established primary performance targets: 100 Hz sampling rate, 6-hour battery runtime, and &lt;50 ms latency.</li>
+              <li>Finalized hardware stack selections, centered around NVIDIA Jetson Orin Nano and including high-precision MEMS IMUs and GPS receivers for ground truth.</li>
+              <li>Established primary performance targets: 25+ Hz sampling rate, 6+ hour battery runtime, and &lt;50 ms latency.</li>
+              <li>Implemented MATLAB IMU simulation as a tool for early testing of machine learning models.</li>
+              <li>Specified preliminary software architecture such as machine learning model inputs, outputs and methodology.</li>
             </ul>
           </div>
           <div style="display: flex; align-items: center; justify-content: center;">
@@ -82,7 +87,8 @@
             <h4 style="margin-bottom: 0.5rem; font-size: 1.05rem;">Major Findings:</h4>
             <ul style="padding-left: 1.2rem; margin-top: 0; color: #475569;">
               <li>Designed custom 3D-printed vibration isolation mounts to ensure clean data collection.</li>
-              <li>Successfully verified ROS2 node communication and early software-hardware integration.</li>
+              <li>Developed ROS2 (Robot Operating System) environment for hardware communication in real-time.</li>
+              <li>Trained machine learning models using simulated IMU data and publicly available datasets, as well as investigated low-pass filtering for pre-processing sensor signals.</li>
             </ul>
           </div>
           <div style="display: flex; align-items: center; justify-content: center;">
@@ -101,6 +107,7 @@
             <ul style="padding-left: 1.2rem; margin-top: 0; color: #475569;">
               <li>Logged over 12 hours of synchronized real-world field data across varied dynamic conditions.</li>
               <li>Confirmed system durability in mobile testing (Kearfott van) and exceeded power targets with an 8+ hour battery life.</li>
+              <li>Identified key areas for improvement in machine learning models and hardware integration.</li>
             </ul>
           </div>
           <div style="display: flex; align-items: center; justify-content: center;">
@@ -112,18 +119,66 @@
       <div class="timeline-item">
         <div class="grid-2" style="align-items: start; gap: 2rem;">
           <div>
-            <p class="eyebrow" style="margin-bottom: 0.5rem; color: #64748b;">May 2026</p>
+            <p class="eyebrow" style="margin-bottom: 0.5rem; color: #64748b;">April - May 2026</p>
             <h3 style="margin-top: 0;">Beta Prototyping & Final Delivery</h3>
             <p>Refine the design and integrate system-level improvements for final demonstration.</p>
             <h4 style="margin-bottom: 0.5rem; font-size: 1.05rem;">Major Findings:</h4>
             <ul style="padding-left: 1.2rem; margin-top: 0; color: #475569;">
-              <li>Finalized machine learning pipeline optimizations against the collected real-world testing datasets.</li>
-              <li>Packaged the complete operational system within the defined budget of &lt;$1,500.</li>
+              <li>Finalized machine learning pipeline and model optimizations with collected real-world testing datasets.</li>
+              <li>Delivered a comprehensive technical package, including hardware, datasets, and software source code for future AI-aided navigation solutions.</li>
+              <li>Packaged the complete operational system with a final unit production cost of &lt;$1,500.</li>
             </ul>
           </div>
           <div style="display: flex; align-items: center; justify-content: center;">
             <img src="pictures/final_prototype.jpg" alt="Final Prototype" style="width: 100%; height: auto; border-radius: 8px; border: 1px solid #cbd5e1;">
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section light">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Our Comprehensive Report</h2>
+        <p>Review our comprehensive findings, testing data, and final prototype details from the latest project phase.</p>
+      </div>
+      
+      <div style="max-width: 900px; margin: 0 auto; border: 1px solid #cbd5e1; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); overflow: hidden; background-color: #ffffff;">
+        <!-- PDF Viewer -->
+        <iframe src="files/milestone4_cover.pdf" style="width: 100%; height: 60vh; min-height: 400px; max-height: 600px; border: none; display: block;" title="Milestone 4 Report PDF">
+          <p>Your browser does not support embedded PDFs. <a href="files/milestone4_cover.pdf">Download the PDF</a>.</p>
+        </iframe>
+        
+        <!-- Mobile Fallback / Download Action -->
+        <div style="padding: 1.5rem 1rem; text-align: center; border-top: 1px solid #cbd5e1; background-color: #f8fafc;">
+          <p style="margin-top: 0; margin-bottom: 1rem; font-size: 0.95rem; color: #475569;">Having trouble viewing on a mobile device?</p>
+          <a href="files/milestone4_cover.pdf" target="_blank" class="btn btn-primary" style="text-decoration: none;">Open / Download PDF</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">Future Work</p>
+        <h2>Project Next Steps</h2>
+        <p>While the initial scope of the NavFusion project has concluded, here are the three most critical areas for continued development and deployment.</p>
+      </div>
+      
+      <div class="grid-3">
+        <div class="card">
+          <h3>1. Aerial Platform Integration</h3>
+          <p>Transition from ground-based van testing to full-scale UAV flight trials, ensuring the custom vibration isolation and AI drift correction perform optimally under high-frequency drone dynamics.</p>
+        </div>
+        <div class="card">
+          <h3>2. Edge AI Optimization</h3>
+          <p>Further accelerate the PSO-LSTM and GRU-AKF models on the embedded hardware using tools like TensorRT and quantization to drive inference latency well below the current 50 ms target.</p>
+        </div>
+        <div class="card">
+          <h3>3. Multi-Sensor Expansion</h3>
+          <p>Incorporate secondary exteroceptive sensors, such as visual odometry or LiDAR, into the ROS2 pipeline to create a tightly coupled fusion system for indefinitely extended GPS-denied operations.</p>
         </div>
       </div>
     </div>
@@ -135,5 +190,6 @@
       <p>Stevens Institute of Technology</p>
     </div>
   </footer>
+  <script src="nav.js"></script>
 </body>
 </html>
