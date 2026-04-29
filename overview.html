@@ -28,47 +28,80 @@
   <section class="page-hero">
     <div class="container">
       <p class="eyebrow">Project Overview</p>
-      <h1>Mission and Background</h1>
+      <h1>AI-Enhanced Inertial Navigation for Mission-Critical Autonomy</h1>
       <p class="page-intro">
-        NavFusion focuses on using AI-enhanced inertial navigation to improve performance in
-        environments where GPS is denied, jammed, spoofed, or otherwise unreliable.
+        NavFusion delivers continuous, high-fidelity localization for autonomous systems by
+        correcting inertial sensor drift in real-time when GNSS signals are denied, spoofed, or
+        unavailable.
       </p>
     </div>
   </section>
 
   <section class="section">
-    <div class="container grid-2">
-      <div class="card">
-        <h3>Background</h3>
-        <p>
-          Mobile robots typically depend on GNSS and exteroceptive sensors for localization, but
-          these methods become difficult to rely on in environments with no reference points or poor
-          signal availability. MEMS IMUs are cost-effective and compact, but they suffer from drift
-          over time.
-        </p>
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">The Challenge & Our Solution</p>
+        <h2>Bridging the Gap Between Cost and Reliability</h2>
       </div>
-      <div class="card">
-        <h3>Project Scope</h3>
-        <ul>
-          <li>Study methods to overcome GPS signal loss.</li>
-          <li>Investigate AI-based solutions for inertial navigation improvement.</li>
-          <li>Evaluate neural networks, filters, and predictive approaches.</li>
-          <li>Deploy and demonstrate the system on a physical platform.</li>
-        </ul>
+      <div class="grid-2" style="align-items: center; gap: 2rem;">
+        <div>
+          <h3>The Problem: GNSS Vulnerability & IMU Drift</h3>
+          <p>
+            Widespread reliance on GNSS for navigation presents a critical single point of failure. In
+            urban canyons, tunnels, or contested environments, signal loss is inevitable. While
+            low-cost MEMS IMUs offer an alternative, they suffer from compounding error, or 'drift',
+            rendering them unreliable for long-duration missions.
+          </p>
+          <h3>The NavFusion Approach: AI-Powered Correction</h3>
+          <p>
+            Our project bridges this capability gap. By fusing data from a cost-effective IMU with a
+            sophisticated AI model (PSO-LSTM), NavFusion learns to predict and correct inertial drift.
+            The result is a robust, edge-deployable system that maintains positional awareness, turning
+            an inexpensive sensor into a high-performance navigation solution.
+          </p>
+        </div>
+        <div class="card" style="text-align: center; padding: 1rem;">
+          <img src="images/drift_correction_placeholder.png" alt="Diagram showing a drifting trajectory vs. a corrected trajectory" style="width: 100%; height: auto; border-radius: 8px;">
+          <p style="font-size: 0.9rem; color: #64748b; margin-top: 0.5rem;">Visual Placeholder: Trajectory Drift vs. AI Correction</p>
+        </div>
       </div>
     </div>
   </section>
 
   <section class="section light">
     <div class="container">
-      <div class="section-heading">
-        <p class="eyebrow">Use Case</p>
-        <h2>Intended Application</h2>
-        <p>
-          The system is designed for ground or aerial vehicles that usually rely on GPS, but need a
-          more robust solution during temporary GPS outages. It is meant to complement GPS rather
-          than replace it.
-        </p>
+      <div class="section-heading" style="margin-bottom: 2rem;">
+        <p class="eyebrow">System Architecture</p>
+        <h2>An Integrated Hardware & Software Platform</h2>
+      </div>
+      <div class="grid-2" style="gap: 2rem;">
+        <div class="card" style="text-align: center; padding: 1rem;">
+          <img src="images/hardware_architecture_placeholder.png" alt="Hardware architecture diagram based on Milestone 4 Report Figure 11.2" style="width: 100%; height: auto; border-radius: 8px;">
+          <h3 style="margin-top: 1rem;">Hardware Architecture</h3>
+          <p>A compact, self-powered unit integrating the NVIDIA Jetson, Movella IMU, and u-blox GNSS receiver into a 3D-printed, vehicle-mountable enclosure.</p>
+        </div>
+        <div class="card" style="text-align: center; padding: 1rem;">
+          <img src="images/software_architecture_placeholder.png" alt="Software architecture diagram based on Milestone 4 Report Figure 11.3" style="width: 100%; height: auto; border-radius: 8px;">
+          <h3 style="margin-top: 1rem;">Software Architecture</h3>
+          <p>A ROS2-based system featuring a modular pipeline for data ingestion, synchronization, AI-based drift correction (GRU/LSTM), and state estimation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container" style="text-align: center;">
+      <div class="section-heading" style="text-align: center; margin: 0 auto;">
+        <p class="eyebrow">Technology Stack</p>
+        <h2>Built With Industry-Standard Tools</h2>
+      </div>
+      <div class="logo-grid" style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 2.5rem; margin-top: 2rem; opacity: 0.95;">
+        <img src="pictures/nvidia_logo.png" alt="NVIDIA Logo" style="max-height: 50px; width: auto;">
+        <img src="pictures/movella_logo.webp" alt="Movella Logo" style="max-height: 50px; width: auto;">
+        <img src="pictures/ublox_logo.png" alt="u-blox Logo" style="max-height: 40px; width: auto;">
+        <img src="pictures/ros2_logo.png" alt="ROS2 Logo" style="max-height: 55px; width: auto;">
+        <img src="pictures/pytorch_logo.png" alt="PyTorch Logo" style="max-height: 50px; width: auto;">
+        <img src="pictures/matlab_logo.png" alt="MATLAB Logo" style="max-height: 50px; width: auto;">
       </div>
     </div>
   </section>

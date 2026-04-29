@@ -30,12 +30,9 @@
       <div>
         <p class="eyebrow">Stevens Senior Design · Kearfott Sponsored Project</p>
         <h1>NavFusion</h1>
-        <h2>AI for Robust Navigation in GPS-Denied Environments</h2>
+        <h2>Securing Autonomous Mobility in GPS-Denied Environments</h2>
         <p class="hero-text">
-          NavFusion is a senior design project focused on improving localization for mobile robots
-          and vehicles when GPS becomes unavailable, spoofed, or unreliable. The system combines
-          IMU sensing, GNSS integration, filtering, and AI-driven drift correction to support
-          real-time navigation on embedded hardware.
+          Tackling the critical vulnerability of GNSS reliance, NavFusion fuses cost-effective MEMS IMUs with advanced deep learning to provide continuous, accurate localization for mobile robots and vehicles when satellite signals are jammed, spoofed, or obstructed.
         </p>
         <div class="button-row">
           <a class="btn btn-primary" href="overview.html">Learn More</a>
@@ -47,20 +44,20 @@
         <h3>Project Snapshot</h3>
         <div class="stats">
           <div class="stat">
-            <strong>&lt; 50 ms</strong>
-            <span>Target inference latency</span>
+            <strong>25 Hz</strong>
+            <span>Synchronized sensor fusion</span>
           </div>
           <div class="stat">
-            <strong>100 Hz</strong>
-            <span>IMU sampling target</span>
+            <strong>PSO-LSTM</strong>
+            <span>AI drift correction models</span>
           </div>
           <div class="stat">
-            <strong>6 Hours</strong>
-            <span>Battery runtime goal</span>
+            <strong>Edge-Ready</strong>
+            <span>Powered by Jetson Orin Nano</span>
           </div>
           <div class="stat">
-            <strong>Drone + Van</strong>
-            <span>Ground and aerial testing</span>
+            <strong>Road-Tested</strong>
+            <span>Validated on real vehicle paths</span>
           </div>
         </div>
       </div>
@@ -70,27 +67,25 @@
   <section class="section light">
     <div class="container">
       <div class="section-heading">
-        <p class="eyebrow">Purpose</p>
-        <h2>Why this project matters</h2>
+        <p class="eyebrow">The Problem & Our Solution</p>
+        <h2>Bridging the gap between low-cost sensors and high-grade reliability</h2>
         <p>
-          GPS denial and interference create serious challenges for autonomous navigation. NavFusion
-          addresses this by enhancing inertial navigation with AI, allowing a vehicle to continue
-          estimating motion even when GNSS signals degrade.
+          As autonomous systems scale, the threat of GNSS interference grows. NavFusion provides a drop-in edge solution that leverages AI to predict and correct inertial drift—keeping vehicles on track without the prohibitive cost of tactical-grade IMUs.
         </p>
       </div>
 
       <div class="grid-3">
         <div class="card">
-          <h3>Reliable Localization</h3>
-          <p>Maintain meaningful navigation estimates during GPS-denied operation.</p>
+          <h3>Combatting GPS Denial</h3>
+          <p>Designed for mobile ground and aerial robots that require continuous tracking through urban canyons, tunnels, and spoofing attacks.</p>
         </div>
         <div class="card">
-          <h3>AI Drift Correction</h3>
-          <p>Use machine learning to reduce IMU drift over longer deployments.</p>
+          <h3>Deep Learning Integration</h3>
+          <p>Utilizes advanced PSO-optimized LSTM and GRU networks to learn complex motion dynamics and eliminate compounding IMU errors.</p>
         </div>
         <div class="card">
-          <h3>Embedded Deployment</h3>
-          <p>Run the solution on real hardware for testing on mobile platforms.</p>
+          <h3>Proven Edge Performance</h3>
+          <p>Features a custom-engineered, battery-powered sensor suite integrating a Movella MTi-3 and u-blox GNSS, rigorously tested on real-world trajectories.</p>
         </div>
       </div>
     </div>
@@ -100,15 +95,22 @@
     <div class="container cta">
       <div>
         <p class="eyebrow">Explore More</p>
-        <h2>See the full project breakdown</h2>
+        <h2>Dive into the engineering</h2>
         <p>
-          Learn about the system architecture, requirements, project team, and development timeline.
+          Explore our complete system architecture, physical prototype evolution, and the machine learning evaluations that power NavFusion.
         </p>
       </div>
       <div class="button-row">
         <a class="btn btn-primary" href="overview.html">Project Overview</a>
         <a class="btn btn-secondary" href="milestones.html">Milestones</a>
       </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding: 3rem 0; border-top: 1px solid #e2e8f0; text-align: center;">
+    <div class="container">
+      <p class="eyebrow" style="margin-bottom: 1.5rem; color: #64748b;">Proudly Sponsored By</p>
+      <img src="pictures/kearfott_logo.jpg" alt="Kearfott Guidance and Navigation" style="max-height: 80px; width: auto; opacity: 0.85;">
     </div>
   </section>
 
