@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NavFusion | System</title>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="navfusion_logo.png" type="image/png" />
 </head>
 <body>
   <header class="topbar">
@@ -151,6 +152,43 @@
   </section>
 
   <section class="section">
+    <div class="container">
+      <div class="section-heading" style="max-width: 100%;">
+        <h2>Results & Performance</h2>
+        <p>Our AI-enhanced drift correction models were rigorously evaluated against unaided inertial navigation baselines. By applying our machine learning models to the synchronized field datasets, the system demonstrates a significant reduction in positional drift during GPS outages, all while maintaining strict low-latency requirements for edge deployment.</p>
+      </div>
+      
+      <div class="grid-2">
+        <div class="card" style="padding: 1.5rem; text-align: center; display: flex; flex-direction: column;">
+          <div style="flex-grow: 1; display: flex; align-items: center; justify-content: center; background: #e2e8f0; border-radius: 8px; min-height: 300px; border: 2px dashed #94a3b8; overflow: hidden;">
+            <!-- <img src="pictures/trajectory_1.png" alt="Trajectory 1 Results" style="width: 100%; height: auto; display: block;"> -->
+            <span style="color: #64748b; font-weight: 600;">[Trajectory 1 Image Placeholder]</span>
+          </div>
+          <h3 style="margin-top: 1.5rem; font-size: 1.1rem; margin-bottom: 0;">Trajectory 1: Urban Circuit</h3>
+        </div>
+        <div class="card" style="padding: 1.5rem; text-align: center; display: flex; flex-direction: column;">
+          <div style="flex-grow: 1; display: flex; align-items: center; justify-content: center; background: #e2e8f0; border-radius: 8px; min-height: 300px; border: 2px dashed #94a3b8; overflow: hidden;">
+            <!-- <img src="pictures/trajectory_2.png" alt="Trajectory 2 Results" style="width: 100%; height: auto; display: block;"> -->
+            <span style="color: #64748b; font-weight: 600;">[Trajectory 2 Image Placeholder]</span>
+          </div>
+          <h3 style="margin-top: 1.5rem; font-size: 1.1rem; margin-bottom: 0;">Trajectory 2: Extended Outage</h3>
+        </div>
+      </div>
+
+      <div class="grid-2" style="margin-top: 3rem;">
+        <div class="card" style="text-align: center; padding: 2.5rem 1.5rem;">
+          <div style="font-size: 3rem; font-weight: 800; margin-bottom: 0.5rem; line-height: 1.2; color: var(--blue);">XX%</div>
+          <p style="margin: 0; font-size: 1.1rem; color: #64748b;">Drift Reduction vs. Unaided INS</p>
+        </div>
+        <div class="card" style="text-align: center; padding: 2.5rem 1.5rem;">
+          <div style="font-size: 3rem; font-weight: 800; margin-bottom: 0.5rem; line-height: 1.2; color: var(--blue);">&lt;XX ms</div>
+          <p style="margin: 0; font-size: 1.1rem; color: #64748b;">Model Inference Latency</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section light">
     <div class="container grid-2">
       <div class="card">
         <h3>Primary Functional Requirements</h3>
